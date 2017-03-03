@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -126,6 +127,21 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\iOSCustomTabbedPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_home.png" />
+    <BundleResource Include="Resources\ic_home%402x.png" />
+    <BundleResource Include="Resources\ic_home%403x.png" />
+    <BundleResource Include="Resources\ic_profile.png" />
+    <BundleResource Include="Resources\ic_profile%402x.png" />
+    <BundleResource Include="Resources\ic_profile%403x.png" />
+    <BundleResource Include="Resources\ic_calendar.png" />
+    <BundleResource Include="Resources\ic_calendar%402x.png" />
+    <BundleResource Include="Resources\ic_calendar%403x.png" />
+    <BundleResource Include="Resources\ic_search.png" />
+    <BundleResource Include="Resources\ic_search%402x.png" />
+    <BundleResource Include="Resources\ic_search%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

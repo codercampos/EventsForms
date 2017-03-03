@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	Title="Home"
+	Icon="ic_home.png"
+	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.HomePage">
+	<ContentPage.Content>
+	</ContentPage.Content>
+</ContentPage>

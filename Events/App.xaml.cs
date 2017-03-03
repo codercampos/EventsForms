@@ -8,7 +8,7 @@ namespace Events
 		{
 			InitializeComponent();
 
-			MainPage = new EventsPage();
+			MainPage = new MainTabbedPage();
 		}
 
 		protected override void OnStart()
