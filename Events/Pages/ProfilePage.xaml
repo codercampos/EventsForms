@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
+<ContentPage
 	Title="Profile"
+	BackgroundColor="#F6F7F9"
+	xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
 	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.ProfilePage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Log Out" />
+	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<StackLayout Spacing="15" Padding="25">
+					<controls:CircleImage 
+						Aspect="AspectFill" 
+						Source="http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG" 
+						BorderColor="Transparent" 
+						BorderThickness="0" 
+						BackgroundColor="Blue" 
+						WidthRequest="120" HeightRequest="120" 
+						HorizontalOptions="Center" />
+					<Label FontSize="28" Text="Carlos Campos" HorizontalTextAlignment="Center" />
+				</StackLayout>
+				<TableView Intent="Settings" BackgroundColor="#F6F7F9">
+					<TableRoot>
+						<TableSection>
+							<TextCell Text="Calendars" />
+							<TextCell Text="Notifications" />
+							<TextCell Text="City" />
+							<TextCell Text="Choose Categories" />
+						</TableSection>
+						<TableSection>
+							<SwitchCell Text="Report a Problem" />
+							<SwitchCell Text="Help" />
+							<SwitchCell Text="Privacy &amp; Terms" />
+						</TableSection>
+					</TableRoot>
+				</TableView>
+			</StackLayout>
+		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

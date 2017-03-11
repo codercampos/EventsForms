@@ -26,7 +26,6 @@ namespace Events
 			});
 			Children.Add(new NavigationPage(new ProfilePage())
 			{
-				BarTextColor = Color.Black,
 				BarBackgroundColor = AppConfig.TabBarColor,
 				Icon = "ic_profile.png"
 			});

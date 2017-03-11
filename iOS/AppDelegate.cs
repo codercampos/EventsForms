@@ -4,6 +4,9 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using ImageCircle.Forms.Plugin.iOS;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Events.iOS
 {
@@ -13,6 +16,11 @@ namespace Events.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+
+			//Configuring iOS Appearance API
+			UINavigationBar.Appearance.TintColor = AppConfig.AccentColor.ToUIColor();
+
+			ImageCircleRenderer.Init();
 
 			LoadApplication(new App());
 
