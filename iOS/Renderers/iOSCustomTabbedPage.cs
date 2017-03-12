@@ -21,6 +21,8 @@ namespace Events.iOS.Renderers
 			var page = (TabbedPage)Element;
 
 			TabBar.TintColor = AppConfig.AccentColor.ToUIColor();
+
+
 			TabBar.BarTintColor = AppConfig.TabBarColor.ToUIColor(); 
 		}
 

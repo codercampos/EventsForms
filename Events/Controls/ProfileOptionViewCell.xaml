@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.Controls.ProfileOptionViewCell">
+	<ViewCell.View>
+		<StackLayout 
+			Spacing="15"
+			Orientation="Horizontal" 
+			HeightRequest="50" 
+			BackgroundColor="White"
+			VerticalOptions="Start"
+			Padding="20,5,0,5"
+			HorizontalOptions="FillAndExpand">
+			<Image 
+				x:Name="iconControl"
+					HorizontalOptions="Start"
+					VerticalOptions="CenterAndExpand"
+					Source="{Binding Icon}"
+					HeightRequest="30" WidthRequest="30" />
+				<StackLayout
+					Spacing="15"
+					Padding="0,0,10,0"
+					Orientation="Horizontal"
+					VerticalOptions="FillAndExpand"
+					HorizontalOptions="FillAndExpand">
+					<Label 
+					x:Name="titleControl"
+						HorizontalOptions="FillAndExpand"
+						TextColor="Black"
+						FontSize="Medium"
+						VerticalTextAlignment="Center"
+						VerticalOptions="FillAndExpand"
+						Text="{Binding Title}" />
+					<Label
+					x:Name="subtitleControl"
+						HorizontalOptions="End"
+						VerticalOptions="FillAndExpand"
+						VerticalTextAlignment="Center"
+						HorizontalTextAlignment="End"
+						Text="{Binding Subtitle}"
+						TextColor="#616161" />
+					<Image
+						HorizontalOptions="End"
+						VerticalOptions="Center"
+						WidthRequest="15"
+						HeightRequest="15"
+						Source="ic_forward.png" />
+				</StackLayout>
+		</StackLayout>
+	</ViewCell.View>
+</ViewCell>
