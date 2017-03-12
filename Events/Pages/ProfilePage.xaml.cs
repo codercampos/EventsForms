@@ -10,6 +10,12 @@ namespace Events
 		public ProfilePage()
 		{
 			InitializeComponent();
+
+		}
+
+		private void LoadSettings()
+		{
+			
 		}
 	}
 }

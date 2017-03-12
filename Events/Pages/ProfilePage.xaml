@@ -2,13 +2,14 @@
 <ContentPage
 	Title="Profile"
 	BackgroundColor="#F6F7F9"
+	xmlns:settings="clr-namespace:Events.Controls;assembly=Events"
 	xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
 	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.ProfilePage">
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="Log Out" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-		<ScrollView>
+		<!--<ScrollView>-->
 			<StackLayout>
 				<StackLayout Spacing="15" Padding="25">
 					<controls:CircleImage 
@@ -21,22 +22,22 @@
 						HorizontalOptions="Center" />
 					<Label FontSize="28" Text="Carlos Campos" HorizontalTextAlignment="Center" />
 				</StackLayout>
-				<TableView Intent="Settings" BackgroundColor="#F6F7F9">
+				<TableView VerticalOptions="Start" Intent="Settings" BackgroundColor="#F6F7F9">
 					<TableRoot>
 						<TableSection>
-							<TextCell Text="Calendars" />
-							<TextCell Text="Notifications" />
-							<TextCell Text="City" />
-							<TextCell Text="Choose Categories" />
+							<settings:ProfileOptionViewCell Title="Calendars" Icon="ic_calendar_profile.png" Subtitle="1" />
+							<settings:ProfileOptionViewCell Title="Notifications" Icon="ic_notification.png" Subtitle="Off" />
+							<settings:ProfileOptionViewCell Title="City" Icon="ic_location.png" Subtitle="New York, New York" />
+							<settings:ProfileOptionViewCell Title="Choose Categories" Icon="ic_plus.png" />
 						</TableSection>
 						<TableSection>
-							<SwitchCell Text="Report a Problem" />
-							<SwitchCell Text="Help" />
-							<SwitchCell Text="Privacy &amp; Terms" />
+							<settings:ProfileOptionViewCell Title="Report a Problem" Icon="ic_problem.png" />
+							<settings:ProfileOptionViewCell Title="Help" Icon="ic_help.png" />
+							<settings:ProfileOptionViewCell Title="Privacy &amp; Terms" Icon="ic_more.png" />
 						</TableSection>
 					</TableRoot>
 				</TableView>
 			</StackLayout>
-		</ScrollView>
+		<!--</ScrollView>-->
 	</ContentPage.Content>
 </ContentPage>
