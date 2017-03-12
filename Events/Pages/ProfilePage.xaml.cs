@@ -12,10 +12,5 @@ namespace Events
 			InitializeComponent();
 
 		}
-
-		private void LoadSettings()
-		{
-			
-		}
 	}
 }

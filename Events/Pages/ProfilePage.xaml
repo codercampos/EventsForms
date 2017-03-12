@@ -9,16 +9,15 @@
 		<ToolbarItem Text="Log Out" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
-		<!--<ScrollView>-->
 			<StackLayout>
-				<StackLayout Spacing="15" Padding="25">
+				<StackLayout Spacing="15" Padding="25,25,25,0">
 					<controls:CircleImage 
 						Aspect="AspectFill" 
 						Source="http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG" 
 						BorderColor="Transparent" 
 						BorderThickness="0" 
 						BackgroundColor="Blue" 
-						WidthRequest="120" HeightRequest="120" 
+						WidthRequest="80" HeightRequest="80" 
 						HorizontalOptions="Center" />
 					<Label FontSize="28" Text="Carlos Campos" HorizontalTextAlignment="Center" />
 				</StackLayout>
@@ -38,6 +37,5 @@
 					</TableRoot>
 				</TableView>
 			</StackLayout>
-		<!--</ScrollView>-->
 	</ContentPage.Content>
 </ContentPage>
