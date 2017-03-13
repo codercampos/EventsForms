@@ -20,7 +20,6 @@ namespace Events.Models
 		{
 			get
 			{
-				var stringToPublish = string.Empty;
 				var daysPassed = DateTime.UtcNow - PublishDate.ToUniversalTime();
 				if (daysPassed.Days < 1)
 				{

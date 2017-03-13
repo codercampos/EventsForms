@@ -44,6 +44,9 @@
     <EmbeddedResource Include="Controls\ProfileOptionViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EventFeedViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -75,6 +78,11 @@
     <Compile Include="Models\WeatherGreeting.cs" />
     <Compile Include="Models\EventFeed.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Controls\EventFeedViewCell.xaml.cs">
+      <DependentUpon>EventFeedViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
