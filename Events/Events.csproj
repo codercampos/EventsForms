@@ -5,7 +5,6 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3E61E611-81A0-433C-959F-175EC3AD9604}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
     <RootNamespace>Events</RootNamespace>
     <AssemblyName>Events</AssemblyName>
@@ -45,6 +44,12 @@
     <EmbeddedResource Include="Controls\ProfileOptionViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EventFeedViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkingPlaceholderContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -71,6 +76,24 @@
     <Compile Include="Controls\ProfileOptionViewCell.xaml.cs">
       <DependentUpon>ProfileOptionViewCell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\IFeedMember.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\WeatherGreeting.cs" />
+    <Compile Include="Models\EventFeed.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Controls\EventFeedViewCell.xaml.cs">
+      <DependentUpon>EventFeedViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="POCOS\EventsPOCO.cs" />
+    <Compile Include="POCOS\EventsFeedPOCO.cs" />
+    <Compile Include="Helpers\FormattedName.cs" />
+    <Compile Include="Controls\EventsDataTemplate.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Controls\WorkingPlaceholderContentView.xaml.cs">
+      <DependentUpon>WorkingPlaceholderContentView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -94,7 +117,18 @@
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Controls\" />
+    <Folder Include="POCOS\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="PrefixedFlat" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
 </Project>
