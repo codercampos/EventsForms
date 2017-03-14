@@ -16,6 +16,19 @@ This is a simple task to replicate the Events for Facebook app and show some of 
 
 I will be adding some cool stuff that Xamarin Forms does not have directly on its API (like the Search bar on the NavigationBar)(I have to figure it out how this works) and document any difficulties here to let you know some approach you might have on your own apps.
 
+## Pages Finished
+### Main Tab Screen
+Home Screen
+Profile Screen
+
+### Next to be implemented
+* Search Page
+* Calendar Page
+* Log In Page
+* Categories Page
+* Detail Page
+* Some other resources (based on the original assets) and SVG assets
+
 ## Resources
 * [Oficial Pttrn](https://pttrns.com/applications/577)
 * IDE: [Visual Studio For Mac Preview 4](https://www.visualstudio.com/)
