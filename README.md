@@ -18,8 +18,8 @@ I will be adding some cool stuff that Xamarin Forms does not have directly on it
 
 ## Pages Finished
 ### Main Tab Screen
-Home Screen
-Profile Screen
+* Home Screen
+* Profile Screen
 
 ### Next to be implemented
 * Search Page
