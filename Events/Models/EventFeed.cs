@@ -5,7 +5,7 @@ namespace Events.Models
 	{
 		public long Id { get; set; }
 		public MemberType Type { get; set; }
-		public string UserName { get; set; }
+		public User User { get; set; }
 		public DateTime PublishDate { get; set; }
 		public PrivacyType Privacy { get; set; }
 		public Event Event { get; set; }

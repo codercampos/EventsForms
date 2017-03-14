@@ -1,84 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ViewCell 
+<ViewCell
+	xmlns:local="clr-namespace:Events.Helpers;assembly=Events"
 	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.Controls.EventFeedViewCell">
-	<ViewCell.View>
-		<StackLayout Padding="0,5" BackgroundColor="#E9EAEE">
+	<StackLayout Padding="0,5" BackgroundColor="#E9EAEE">
+		<StackLayout
+			Padding="15,15,15,5"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="Start"
+			BackgroundColor="White">
 			<StackLayout
-				Padding="15,15,15,5"
+				Spacing="10"
+				Orientation="Horizontal"
 				HorizontalOptions="FillAndExpand"
-				VerticalOptions="Start"
-				BackgroundColor="White">
+				VerticalOptions="FillAndExpand">
+				<Image
+					VerticalOptions="Start"
+					Source="{Binding User.ProfilePicture}"
+					Aspect="AspectFill"
+					HorizontalOptions="Start"
+					WidthRequest="50"
+					HeightRequest="50"/>
 				<StackLayout
-					Spacing="10"
-					Orientation="Horizontal"
+					Spacing="3"
+					WidthRequest="180"
 					HorizontalOptions="FillAndExpand"
-					VerticalOptions="FillAndExpand">
-					<Image
-						VerticalOptions="Start"
-						BackgroundColor="Black"
-						Aspect="AspectFill"
-						HorizontalOptions="Start"
-						WidthRequest="50"
-						HeightRequest="50"/>
-					<StackLayout
-						Spacing="3"
-						WidthRequest="180"
-						HorizontalOptions="FillAndExpand"
-						VerticalOptions="Start">
-						<Label 
-							HorizontalOptions="FillAndExpand">
-							<Label.FormattedText>
-								<FormattedString>
-									<Span FontSize="Small" FontAttributes="Bold" Text="Jeremy Le Van" />
-									<Span FontSize="Small" Text=" is going to an event" />
-								</FormattedString>
-							</Label.FormattedText>
-						</Label>
-						<StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="5">
-							<Label FontSize="Micro" Text="Yesterday at 6:22 PM" />
-						</StackLayout>
-					</StackLayout>
-					<Image 
-						Source="ic_forward.png"
-						WidthRequest="15"
-						HeightRequest="15"
-						HorizontalOptions="End"
-						VerticalOptions="Start"
-						Rotation="90"/>
-				</StackLayout>
-				<StackLayout Spacing="0">
-					<Image Source="img_test_md.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="180" Aspect="AspectFill" />
-					<StackLayout Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
-						<StackLayout Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
-							<Label TextColor="Red" FontSize="Medium" Text="NOV" HorizontalTextAlignment="Center" />
-							<Label TextColor="Black" FontSize="Large" Text="3" HorizontalTextAlignment="Center" />
-						</StackLayout>
-						<StackLayout Spacing="5">
-							<Label FontSize="Medium" FontAttributes="Bold" Text="The Magician at Output" />
-							<Label FontSize="Small" Text="Output • Brooklyn, New York" />
-							<Label FontSize="Micro" Text="2.2k people are interested" />
-						</StackLayout>
-						<Image WidthRequest="25" HeightRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="ic_interested_gray.png" />
+					VerticalOptions="Start">
+					<StackLayout.Resources>
+						<ResourceDictionary>
+							<local:FormattedName x:Key="formattedName" />
+						</ResourceDictionary>
+					</StackLayout.Resources>
+					<Label
+						FormattedText="{Binding User.FullName, Converter={StaticResource formattedName}}"
+						HorizontalOptions="FillAndExpand" />
+					<StackLayout Orientation="Horizontal" VerticalOptions="Start" Spacing="5">
+						<Label FontSize="Micro" Text="{Binding PublishDateString}" />
 					</StackLayout>
 				</StackLayout>
-				<StackLayout Spacing="0">
-					<BoxView HeightRequest="1" BackgroundColor="#E3E3E4" HorizontalOptions="FillAndExpand" />
-					<StackLayout Padding="0, 10" Orientation="Horizontal">
-						<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-							<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
-							<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Like" />
-						</StackLayout>
-						<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-							<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
-							<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Comment" />
-						</StackLayout>
-						<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-							<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
-							<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Share" />
-						</StackLayout>
+				<Image 
+					Source="ic_forward.png"
+					WidthRequest="15"
+					HeightRequest="15"
+					HorizontalOptions="End"
+					VerticalOptions="Start"
+					Rotation="90"/>
+			</StackLayout>
+			<StackLayout Spacing="0">
+				<Image Source="img_test_md.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="180" Aspect="AspectFill" />
+				<StackLayout Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+					<StackLayout Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
+						<Label TextColor="Red" FontSize="Medium" Text="NOV" HorizontalTextAlignment="Center" />
+						<Label TextColor="Black" FontSize="Large" Text="3" HorizontalTextAlignment="Center" />
+					</StackLayout>
+					<StackLayout Spacing="5">
+						<Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Event.Title}" />
+						<Label FontSize="Small" Text="{Binding Event.FullVenue}" />
+						<Label FontSize="Micro" Text="{Binding Event.InterestedPeople}" />
+					</StackLayout>
+					<Image WidthRequest="25" HeightRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="{Binding Event.CoverImage}" />
+				</StackLayout>
+			</StackLayout>
+			<StackLayout Spacing="0">
+				<BoxView HeightRequest="1" BackgroundColor="#E3E3E4" HorizontalOptions="FillAndExpand" />
+				<StackLayout Padding="0, 10" Orientation="Horizontal">
+					<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+						<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
+						<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Like" />
+					</StackLayout>
+					<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+						<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
+						<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Comment" />
+					</StackLayout>
+					<StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+						<Image BackgroundColor="Black" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="25" HeightRequest="25"  />
+						<Label HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" FontSize="Small" TextColor="#9196A2" Text="Share" />
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
 		</StackLayout>
-	</ViewCell.View>
+	</StackLayout>
 </ViewCell>

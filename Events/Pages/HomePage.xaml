@@ -11,9 +11,9 @@
 	<ContentPage.Content>
 		<ListView 
 			ItemSelected="Handle_ItemSelected"
-			HasUnevenRows="true" 
+			HasUnevenRows="true"
 			SeparatorVisibility="None" 
-			ItemsSource="Feed">
+			ItemsSource="{Binding Feed}">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<templates:EventFeedViewCell />

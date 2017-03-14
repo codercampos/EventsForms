@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Events.Models;
+using Events.POCOS;
 
 namespace Events.ViewModels
 {
@@ -28,16 +29,13 @@ namespace Events.ViewModels
 
 		private void LoadData()
 		{
-			for (int i = 0; i < 10; i++)
+			//First add the greeting
+			//TODO greeting member here
+			//Second add the Events feed from your friends
+			var poco = new EventsFeedPOCO();
+			foreach (var item in poco.EventsInFeed)
 			{
-				var model = new EventFeed
-				{
-					Id = i,
-					Type = MemberType.EventInfo,
-					UserName = "Carlos Campos",
-					PublishDate = DateTime.Now.ToUniversalTime().AddDays(-1),
-					Privacy = PrivacyType.Public
-				};
+				Feed.Add(item);
 			}
 		}
 	}
