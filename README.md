@@ -1,9 +1,11 @@
 # EventsForms
 Pattern reproduction of Events for Facebook on a Xamarin Forms app
 
-##Screenshots
-![Screenshots](http://imgur.com/a/095uK)
-Format: ![Alt Text](url)
+## Screenshots
+
+![Screenshot 1](http://i.imgur.com/y4RQk2v.png)
+![Screenshot 2](http://i.imgur.com/NUzZC9A.png)
+
 
 ## Supported Platforms
 * iOS
