@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	Title="Home"
+	Icon="ic_home.png"
+	xmlns:viewmodels="clr-namespace:Events.ViewModels;assembly=Events"
+	xmlns:templates="clr-namespace:Events.Controls;assembly=Events"
+	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.HomePage">
+	<ContentPage.BindingContext>
+		<viewmodels:HomeViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="ic_interested_gray.png" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ListView 
+			ItemSelected="Handle_ItemSelected"
+			HasUnevenRows="true"
+			SeparatorVisibility="None" 
+			ItemsSource="{Binding Feed}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<templates:EventFeedViewCell />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

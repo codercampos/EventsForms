@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.Controls.WorkingPlaceholderContentView">
+	<ContentView.Content>
+		<StackLayout Padding="20" Spacing="20">
+			<Image HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Source="img_work.png" WidthRequest="80" HeightRequest="80" />
+			<Label FontSize="Large" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Sorry, this feature is not ready yet. Please come back later" />
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>
