@@ -50,6 +50,9 @@
     <EmbeddedResource Include="Controls\WorkingPlaceholderContentView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WeatherInfoViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -93,6 +96,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Controls\WorkingPlaceholderContentView.xaml.cs">
       <DependentUpon>WorkingPlaceholderContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeatherInfoViewCell.xaml.cs">
+      <DependentUpon>WeatherInfoViewCell.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

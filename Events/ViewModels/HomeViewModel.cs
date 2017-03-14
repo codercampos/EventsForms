@@ -30,7 +30,15 @@ namespace Events.ViewModels
 		private void LoadData()
 		{
 			//First add the greeting
-			//TODO greeting member here
+			var weather = new WeatherGreeting
+			{
+				Id = 1,
+				Type = MemberType.WeatherInfo,
+				CurrentCity = "New York",
+				Description = "Mostly Cloudy",
+				Temperature = 16
+			};
+			Feed.Add(weather);
 			//Second add the Events feed from your friends
 			var poco = new EventsFeedPOCO();
 			foreach (var item in poco.EventsInFeed)
