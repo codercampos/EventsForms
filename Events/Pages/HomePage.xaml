@@ -2,6 +2,7 @@
 <ContentPage 
 	Title="Home"
 	Icon="ic_home.png"
+	BackgroundColor="#E9EAEE"
 	xmlns:viewmodels="clr-namespace:Events.ViewModels;assembly=Events"
 	xmlns:templates="clr-namespace:Events.Controls;assembly=Events"
 	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.HomePage">
@@ -18,9 +19,7 @@
 			SeparatorVisibility="None" 
 			ItemsSource="{Binding Feed}">
 			<ListView.ItemTemplate>
-				<DataTemplate>
-					<templates:EventFeedViewCell />
-				</DataTemplate>
+				<templates:EventsDataTemplate />
 			</ListView.ItemTemplate>
 		</ListView>
 	</ContentPage.Content>

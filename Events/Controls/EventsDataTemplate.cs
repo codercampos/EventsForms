@@ -12,6 +12,10 @@ namespace Events.Controls
 			{
 				return new DataTemplate(typeof(EventFeedViewCell));
 			}
+			else if(info.Type == MemberType.WeatherInfo)
+			{
+				return new DataTemplate(typeof(WeatherInfoViewCell));
+			}
 			return null;
 		}
 	}

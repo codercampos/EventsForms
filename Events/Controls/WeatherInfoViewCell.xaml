@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.Controls.WeatherInfoViewCell">
+	<StackLayout Padding="0,5" BackgroundColor="#E9EAEE">
+		<StackLayout Padding="20,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal" BackgroundColor="White">
+			<StackLayout HorizontalOptions="FillAndExpand">
+				<Label VerticalOptions="EndAndExpand" FontSize="Medium" TextColor="Black" Text="{Binding CurrentCity}" />
+				<Label VerticalOptions="StartAndExpand" FontSize="Small" TextColor="#909195" Text="{Binding Description}" />
+			</StackLayout>
+			<StackLayout HorizontalOptions="End" Orientation="Horizontal">
+				<Image Source="img_weather.png" WidthRequest="50" HeightRequest="50" />
+				<Label FontSize="32" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Temperature, StringFormat='{0}˚'}" />
+			</StackLayout>
+		</StackLayout>
+	</StackLayout>
+</ViewCell>
