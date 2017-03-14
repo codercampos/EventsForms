@@ -12,6 +12,6 @@ I will be adding some cool stuff that Xamarin Forms does not have directly on it
 
 ## Resources
 * [Oficial Pttrn](https://pttrns.com/applications/577)
-* IDE: (Visual Studio For Mac Preview 4)[https://www.visualstudio.com/]
+* IDE: [Visual Studio For Mac Preview 4](https://www.visualstudio.com/)
 * Framework: Xamarin Forms
 * Assets: [Icon8](https://icons8.com/)
