@@ -47,6 +47,9 @@
     <EmbeddedResource Include="Controls\EventFeedViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WorkingPlaceholderContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -88,6 +91,9 @@
     <Compile Include="Helpers\FormattedName.cs" />
     <Compile Include="Controls\EventsDataTemplate.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Controls\WorkingPlaceholderContentView.xaml.cs">
+      <DependentUpon>WorkingPlaceholderContentView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

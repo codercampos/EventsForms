@@ -47,17 +47,26 @@
 			</StackLayout>
 			<StackLayout Spacing="0">
 				<Image Source="img_test_md.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="180" Aspect="AspectFill" />
-				<StackLayout Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
-					<StackLayout Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
-						<Label TextColor="Red" FontSize="Medium" Text="NOV" HorizontalTextAlignment="Center" />
-						<Label TextColor="Black" FontSize="Large" Text="3" HorizontalTextAlignment="Center" />
+				<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+					<BoxView WidthRequest="1" BackgroundColor="#5AA3A3A3" HorizontalOptions="Start" VerticalOptions="FillAndExpand" />
+					<StackLayout Spacing="15" Orientation="Horizontal" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+						<StackLayout Spacing="2" HorizontalOptions="Start" VerticalOptions="Center">
+							<Label TextColor="Red" FontSize="Medium" Text="NOV" HorizontalTextAlignment="Center" />
+							<Label TextColor="Black" FontSize="Large" Text="3" HorizontalTextAlignment="Center" />
+						</StackLayout>
+						<StackLayout Spacing="5">
+							<Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Event.Title}" />
+							<Label FontSize="Small" Text="{Binding Event.FullVenue}" />
+							<Label FontSize="Micro" Text="{Binding Event.InterestedPeople}" />
+						</StackLayout>
+						<Image WidthRequest="25" HeightRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="{Binding Event.CoverImage}" />
 					</StackLayout>
-					<StackLayout Spacing="5">
-						<Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Event.Title}" />
-						<Label FontSize="Small" Text="{Binding Event.FullVenue}" />
-						<Label FontSize="Micro" Text="{Binding Event.InterestedPeople}" />
-					</StackLayout>
-					<Image WidthRequest="25" HeightRequest="25" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="{Binding Event.CoverImage}" />
+					<BoxView WidthRequest="2" BackgroundColor="#5AA3A3A3" HorizontalOptions="End" VerticalOptions="FillAndExpand" />
+				</StackLayout>
+
+				<BoxView HeightRequest="3" BackgroundColor="#4AA3A3A3" />
+				<StackLayout>
+					<Image WidthRequest="20" HeightRequest="20" />
 				</StackLayout>
 			</StackLayout>
 			<StackLayout Spacing="0">

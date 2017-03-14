@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 	Title="Search"
+	BackgroundColor="#E9EAEE"
+	xmlns:controls="clr-namespace:Events.Controls;assembly=Events"
 	xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Events.SearchPage">
 	<ContentPage.Content>
+		<controls:WorkingPlaceholderContentView />
 	</ContentPage.Content>
 </ContentPage>

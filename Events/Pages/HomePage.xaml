@@ -8,6 +8,9 @@
 	<ContentPage.BindingContext>
 		<viewmodels:HomeViewModel />
 	</ContentPage.BindingContext>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="ic_interested_gray.png" />
+	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<ListView 
 			ItemSelected="Handle_ItemSelected"

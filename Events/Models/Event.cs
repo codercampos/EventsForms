@@ -23,7 +23,7 @@ namespace Events.Models
 		{
 			get
 			{
-				return UsersInterested >= 1000 ? $"{(UsersInterested / 1000):0.##}K people are interested" : InterestedPeople + " people are interested";
+				return UsersInterested >= 1000 ? $"{(UsersInterested / 1000m):0.#}K people are interested" : InterestedPeople + " people are interested";
 			}
 		}
 	}

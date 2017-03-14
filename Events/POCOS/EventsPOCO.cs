@@ -12,7 +12,7 @@ namespace Events.POCOS
 		{
 			Events = new List<Event>
 			{
-				new Event { Id = 1, Title = "The Magician at Output", City = "Brooklyn, New York", CoverImage = "img_test_md.png", UsersInterested = 2000, EventDate = new DateTime(2017, 4, 25), Venue = "Output" }
+				new Event { Id = 1, Title = "The Magician at Output", City = "Brooklyn, New York", CoverImage = "img_test_md.png", UsersInterested = 2210, EventDate = new DateTime(2017, 4, 25), Venue = "Output" }
 			};
 		}
 	}
